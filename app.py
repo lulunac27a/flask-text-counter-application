@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from typing import Union
 
 app = Flask(__name__)
 
@@ -12,7 +13,7 @@ def homepage() -> str:  # home page
 
 @app.template_filter("comma_separator")  # comma separator filter
 def comma_separator_filter(
-    number: int | float,
+    number: Union[int, float]
 ) -> str:  # get number with comma separator as thousands separator
     # print number with comma separator as thousands separator
     return f"{number:,}"
