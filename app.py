@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route("/")  # index page
 def homepage():  # home page
     return render_template(
-        "index.html", characters=0, words=0, lines=0
+        "index.html", characters=0, words=0, lines=0, text_content=""
     )  # return index page template
 
 
