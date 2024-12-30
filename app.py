@@ -8,6 +8,11 @@ def homepage():
     return render_template("index.html", characters=0, words=0, lines=0)
 
 
+@app.template_filter("comma_separator")
+def comma_separator_filter(number):
+    return f"{number:,}"
+
+
 @app.route("/calculate_text_counter", methods=["POST"])
 def calculate_text_counter():
     text_content = request.form["text_content"]
