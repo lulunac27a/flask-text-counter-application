@@ -15,5 +15,9 @@ def calculate_text_counter():
     words = len(text_content.split())
     lines = len(text_content.split("\n"))
     return render_template(
-        "index.html", characters=characters, words=words, lines=lines
+        "index.html",
+        characters=characters,
+        words=words,
+        lines=lines,
+        text_content=text_content,
     )
