@@ -1,17 +1,15 @@
 <html>
-    <head>
-        <title>Text Counter Application Using Flask</title>
-    </head>
-    <body>
-        <h1>Text Counter Application Using Flask</h1>
-        <form action="{{ url_for('calculate_text_counter') }}" method="post">
-            <textarea name="text_content" rows="10" cols="80"></textarea><br>
-            <input type="submit" value="Calaulate Text Count">
-        </form>
-        <div id="output">
-            Characters: {{ characters }}
-            Words: {{ words }}
-            Lines: {{ lines }}
-        </div>
-    </body>
+  <head>
+    <title>Text Counter Application Using Flask</title>
+  </head>
+  <body>
+    <h1>Text Counter Application Using Flask</h1>
+    <form action="{{ url_for('calculate_text_counter') }}" method="post">
+      <textarea name="text_content" rows="10" cols="80"></textarea><br />
+      <input type="submit" value="Calaulate Text Count" />
+    </form>
+    <div id="output">
+      Characters: {{ characters }} Words: {{ words }} Lines: {{ lines }}
+    </div>
+  </body>
 </html>
