@@ -32,3 +32,7 @@ def calculate_text_counter():  # calculate text counter
         lines=lines,
         text_content=text_content,
     )  # return template with updated character, word and line count
+
+
+if __name__ == "__main__":
+    app.run(port=8081, debug=True)  # run the app at port 8081
