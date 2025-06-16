@@ -1,22 +1,22 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Text Counter Application Using Flask</title>
-  </head>
-  <body>
-    <h1>Text Counter Application Using Flask</h1>
-    <form action="{{ url_for('calculate_text_counter') }}" method="post">
-      <!--form to calculate text count-->
-      <textarea name="text_content" rows="10" cols="80">
+    <head>
+        <title>Text Counter Application Using Flask</title>
+    </head>
+    <body>
+        <h1>Text Counter Application Using Flask</h1>
+        <form action="{{ url_for('calculate_text_counter') }}" method="post">
+            <!--form to calculate text count-->
+            <textarea name="text_content" rows="10" cols="80">
 {{ text_content }}</textarea
-      ><br />
-      <input type="submit" value="Calculate Text Count" />
-    </form>
-    <div id="output">
-      <!--text output to see the calculated number of characters, words and lines in entered text box area-->
-      Characters: {{ characters | comma_separator }}<br />
-      Words: {{ words | comma_separator }}<br />
-      Lines: {{ lines | comma_separator }}
-    </div>
-  </body>
+            ><br />
+            <input type="submit" value="Calculate Text Count" />
+        </form>
+        <div id="output">
+            <!--text output to see the calculated number of characters, words and lines in entered text box area-->
+            Characters: {{ characters | comma_separator }}<br />
+            Words: {{ words | comma_separator }}<br />
+            Lines: {{ lines | comma_separator }}
+        </div>
+    </body>
 </html>
